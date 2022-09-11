@@ -1,0 +1,136 @@
+
+@font-face {
+    font-family: poppins;
+    src: url("../fonts/Poppins-Regular.ttf");
+}
+@font-face {
+    font-family: roboto;
+    src: url("../fonts/Roboto-Regular.ttf");
+}
+
+:root {
+    --pastel-blue: #6dcaff;
+    --heading: #32333c;
+    --paragraph: #8a8fa3;
+}
+
+/* Generic */
+* {
+    margin: 0;
+    line-height: 1.5;
+    font-family: roboto;
+}
+
+h1, h2 {
+    color: var(--heading);
+}
+
+h2 {
+    font-size: 45px;
+}
+
+p {
+    color: var(--paragraph);
+    font-size: 16px;
+}
+
+/* Buttons */
+button {
+    padding: 10px;
+    font-weight: bold;
+    border: 2px solid;
+    border-radius: 2px;
+    font-size: 16px;
+    transition: color 250ms, background-color 250ms;
+}
+button:hover {
+    cursor: pointer;
+}
+
+.button-fill {
+    color: white;
+    background-color: var(--pastel-blue);
+    border-color: var(--pastel-blue);
+}
+.button-fill:hover {
+    color: var(--pastel-blue);
+    background-color: white;
+}
+
+.button-outline {
+    color: var(--pastel-blue);
+    background-color: white;
+    border-color: var(--pastel-blue);
+}
+.button-outline:hover {
+    color: white;
+    background-color: var(--pastel-blue);
+}
+
+/* Navbar */
+.navbar {
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.navbar-menu {
+    display: flex;
+    gap: 25px;
+}
+
+.navbar-menu-item {
+    list-style: none;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: black;
+    position: relative;
+    transition: color 250ms;
+}
+.navbar-link:hover {
+    color: var(--pastel-blue);
+}
+.navbar-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--pastel-blue);
+    transition: width 250ms;
+}
+.navbar-link:hover::after {
+    width: 100%;
+}
+
+/* Intro Section */
+.intro-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+}
+
+.intro-heading-container {
+    display: static;
+}
+
+.intro-heading {
+    font-size: 55px;
+    font-weight: bold;
+}
+.intro-text {
+    font-size: 30px;
+}
+
+
+
+
